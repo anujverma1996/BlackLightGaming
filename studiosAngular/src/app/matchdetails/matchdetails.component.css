@@ -1,0 +1,17 @@
+table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 2px;
+  }
+.input{
+    margin-right: 50%;
+} 
+.btn-success{
+   float: right;
+}
+#form-control{
+  padding-right: 50%;
+}
+.table .btn-success{
+  float: right;
+}

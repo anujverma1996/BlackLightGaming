@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="banner">
+        <h1>BLACKLIGHT PANEL</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <div id="mySidenav" class="sidenav">
+                <a href="#" (click)="toggleMatchUserDetailsWindow(true)">User Details >></a>
+                <a href="#" (click)="toggleMatchUserDetailsWindow(false)">Match Details >></a>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <app-userdetails *ngIf="showUser" [user]="user" (searchEvent)="getUserDetails($event)" (matchShowDetailEvent)="showMatchEvent($event)"></app-userdetails>
+            <app-matchdetails *ngIf="showMatch" [matchDetails]="match" (searchEvent)="getMatchDetails($event)" (userShowDetailEvent)="showUserEvent($event)"></app-matchdetails>
+        </div>
+    </div>
+</div>

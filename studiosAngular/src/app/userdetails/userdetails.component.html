@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <div class="users">
+        <div class="row">
+            <p class="col-md-2"> Enter User ID : </p>
+            <p class="col-md-7"><input  type="username" class="form-control" name="userId" id="userId" [(ngModel)]="user.userId" required></p>
+            <p class="col-md-3"><button class="btn btn-success" (click)="searchUser()">GO</button></p>
+        </div>    
+    </div>
+    <div>
+        <table class="table table-striped">
+            <tbody>
+                <tr> <td>User ID</td> <td>{{user.userId}}</td> </tr>
+                <tr><td>Name</td>  <td>{{user.name}}</td> </tr>
+                <tr><td>Games Played </td> <td>{{user.gamesPlayed}}</td> </tr>
+                <tr><td>Games Won </td> <td>{{user.gamesWon}}</td></tr>
+                <tr><td>Last Game ID</td><td>{{user.lastGameId}} <button class="btn btn-success" (click)="getMatchDetails(user.lastGameId)">SEE Details</button></td></tr> 
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+

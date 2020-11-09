@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <div class="users">
+        <div class="row">
+            <p class="col-md-2"> Enter Match ID : </p>
+            <p class="col-md-7"><input  type="username" class="form-control" name="matchId" id="matchId"
+                 [(ngModel)]="matchDetails.matchId" required></p>
+            <p class="col-md-3"><button class="btn btn-success" (click)="searchMatch()">GO</button></p>
+        </div>    
+    </div>
+    <div>
+        <table class="table table-striped">
+            <tbody>
+                <tr> <td>MATCH ID</td> <td>{{matchDetails.matchId}}</td> </tr>
+                <tr><td>USER1</td>  <td>{{matchDetails.user1}}<button class="btn btn-success" (click)="getUserDetails(matchDetails.user1)">SEE Details</button></td> </tr>
+                <tr><td>USER2</td> <td>{{matchDetails.user2}}<button class="btn btn-success" (click)="getUserDetails(matchDetails.user2)">SEE Details</button></td> </tr>
+                <tr><td>MATCHSTARTTIME</td> <td>{{matchDetails.matchStartTime}}</td></tr>
+            </tbody>
+        </table>
+    </div>
+</div>
